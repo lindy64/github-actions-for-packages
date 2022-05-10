@@ -62,7 +62,7 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         username: ${{github.actor}}
-        password: ${{secrets.GITHUB_TOKEN}}
-        registry: docker.pkg.github.com
+        password: ${{ secrets.GHCR_PAT }}
+        registry: ghcr.io
         repository: lindy64/github-actions-for-packages/tic-tac-toe
         tag_with_sha: true
